@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/xhoto/xo-idl/gen/go/helloworld";
+
+package helloworld;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply) {
+    option (google.api.http) = {
+      get: "/v1/greeter/{name}"
+    };
+  }
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
