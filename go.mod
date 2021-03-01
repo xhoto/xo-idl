@@ -1,4 +1,4 @@
-module dev.azure.com/SKT-AIDevOps/ASKA/aska-idl.git
+module github.com/xhoto/xo-idl
 
 go 1.15
 
